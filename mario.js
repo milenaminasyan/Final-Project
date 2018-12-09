@@ -241,8 +241,6 @@ bigBlock = {
 	image: bigBlockImg,
 	draw: function(){
 		context.drawImage(this.image, this.x, this.y, this.width, this.height);
-	},
-	update: function(){			
 	}
 };
 bigBlock2 = {
@@ -255,8 +253,6 @@ bigBlock2 = {
 	image: bigBlockImg,
 	draw: function(){
 		context.drawImage(this.image, this.x, this.y, this.width, this.height);
-	},
-	update: function(){			
 	}
 };
 koopa = {
@@ -303,8 +299,6 @@ stolbik2 = {
 	image: stolbikImg,
 	draw: function(){
 		context.drawImage(this.image, this.x, this.y, this.width, this.height);
-	},
-	update: function(){	
 	}
 };
 coins = [
@@ -425,7 +419,7 @@ stolbik1 = {
 	image: stolbikImg,
 	draw: function(){
 		context.drawImage(this.image, this.x, this.y, this.width, this.height);
-	},
+	}
 };
 piranha = {
 	x: 729,
@@ -605,7 +599,6 @@ const update = function(){
 	dragon.update();
 	dragonBullet.update();
 	princess.update();
-	bigBlock2.update();
 	droplet1.update();
 	droplet2.update();
 	coins.forEach(coin=>{
@@ -615,8 +608,6 @@ const update = function(){
 		!bullet.deleteme && bullet.update ()
 	})
 }; 
-
-bullets = bullets.filter(star => !star.deleteme);
 
 //this code is taken from roubenmeschian.com
 const intersect = function(obj1, obj2) {
